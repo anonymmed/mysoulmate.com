@@ -2,7 +2,7 @@
 
 
 
-ol, ul {
+ol, ul.cartWrap,ul.cartWrap2 {
     list-style: none;
 }
 

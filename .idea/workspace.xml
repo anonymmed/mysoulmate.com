@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5933762-ea7a-4200-87d8-6974eb8d70da" name="Default" comment="">
+    <list default="true" id="e5933762-ea7a-4200-87d8-6974eb8d70da" name="Default" comment="Adding shopping cart design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/CartBundle/Resources/views/cart.html.twig" afterPath="$PROJECT_DIR$/src/CartBundle/Resources/views/cart.html.twig" />
+      <change beforePath="$PROJECT_DIR$/web/css/style2.css" afterPath="$PROJECT_DIR$/web/css/style2.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,25 +18,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="cart.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cart.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CartBundle/Resources/views/cart.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="57" lean-forward="false" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+            <state relative-caret-position="300">
+              <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="22" />
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#6081#6097#0#Twig" expanded="true" />
+                <element signature="e#6906#6922#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style2.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style2.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/css/style2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
-              <caret line="412" column="0" lean-forward="false" selection-start-line="412" selection-start-column="0" selection-end-line="412" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -66,7 +68,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>logout</find>
       <find>if</find>
       <find>logn</find>
       <find>foo</find>
@@ -96,6 +97,7 @@
       <find>label</find>
       <find>.label</find>
       <find>less</find>
+      <find>ul</find>
     </findStrings>
   </component>
   <component name="FrameworkCommandLineHistory">
@@ -184,8 +186,8 @@
         <option value="$PROJECT_DIR$/app/Resources/views/head.html.twig" />
         <option value="$PROJECT_DIR$/web/scss/style.scss" />
         <option value="$PROJECT_DIR$/app/Resources/views/banner_cart.html.twig" />
-        <option value="$PROJECT_DIR$/web/css/style2.css" />
         <option value="$PROJECT_DIR$/src/CartBundle/Resources/views/cart.html.twig" />
+        <option value="$PROJECT_DIR$/web/css/style2.css" />
       </list>
     </option>
   </component>
@@ -292,48 +294,6 @@
               <item name="mysoulmate" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="bin" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="mysoulmate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysoulmate" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mysoulmate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysoulmate" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mysoulmate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysoulmate" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mysoulmate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysoulmate" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mysoulmate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysoulmate" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mysoulmate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysoulmate" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mysoulmate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysoulmate" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bg" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -385,7 +345,7 @@
       <updated>1520967825889</updated>
       <workItem from="1520967827148" duration="47386000" />
       <workItem from="1521842459920" duration="2230000" />
-      <workItem from="1521931851170" duration="12540000" />
+      <workItem from="1521931851170" duration="13676000" />
     </task>
     <task id="LOCAL-00001" summary="updating">
       <created>1521937289788</created>
@@ -412,7 +372,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62156000" />
+    <option name="totallyTimeSpent" value="63292000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -835,23 +795,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/style2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="412" column="0" lean-forward="false" selection-start-line="412" selection-start-column="0" selection-end-line="412" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CartBundle/Resources/views/cart.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="57" lean-forward="false" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+        <state relative-caret-position="300">
+          <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="22" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#6081#6097#0#Twig" expanded="true" />
+            <element signature="e#6906#6922#0#Twig" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
