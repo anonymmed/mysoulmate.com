@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+{{ include('head.html.twig') }}
+</head>
+<body>
+{{ include('preloader.html.twig') }}
+
+{% block header %}{{ include('header.html.twig') }} {% endblock header %}
+{% block banner %} {{ include('banner_index.html.twig') }} {% endblock banner %}
+{% block pagesection %}{% endblock pagesection %}
+{% block counter %}{{ include('counter_index.html.twig') }}{% endblock counter %}
+{{ include('jquery.html.twig') }}
+{% block contact %}{% endblock contact %}
+{% block footer %} {{ include('footer.html.twig') }} {% endblock footer %}
+</body>
+</html>

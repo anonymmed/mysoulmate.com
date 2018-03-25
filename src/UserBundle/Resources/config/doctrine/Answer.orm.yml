@@ -1,0 +1,38 @@
+UserBundle\Entity\Answer:
+    type: entity
+    table: answer
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        question:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+        answer:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+        theme:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+        idUser:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_user
+    lifecycleCallbacks: {  }

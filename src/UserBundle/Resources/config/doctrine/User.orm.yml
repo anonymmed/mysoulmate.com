@@ -1,0 +1,102 @@
+UserBundle\Entity\User:
+    type: entity
+    table: user
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        fname:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+        lname:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+        phonenumber:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: phoneNumber
+        gender:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        image:
+            type: string
+            nullable: true
+            length: 150
+            options:
+                fixed: false
+        age:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        address:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+        dateSu:
+            type: date
+            nullable: false
+            column: date_SU
+        nbrLike:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: nbr_like
+        city:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        state:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        zip:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        membership:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        etat:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        dated:
+            type: date
+            nullable: true
+            column: dateD
+        datedd:
+            type: date
+            nullable: true
+            column: dateDD
+    lifecycleCallbacks: {  }

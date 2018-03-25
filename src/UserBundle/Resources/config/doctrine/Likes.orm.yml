@@ -1,0 +1,27 @@
+UserBundle\Entity\Likes:
+    type: entity
+    table: likes
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        liked:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        likedBy:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: liked_by
+    lifecycleCallbacks: {  }

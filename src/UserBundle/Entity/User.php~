@@ -1,0 +1,146 @@
+<?php
+
+namespace UserBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Query\Expr\Base;
+use FOS\UserBundle\Model\User as BaseUser;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="user")
+ */
+class User extends BaseUser
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fname", type="string", length=100, nullable=false)
+     */
+    private $fname;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lname", type="string", length=100, nullable=false)
+     */
+    private $lname;
+
+
+
+
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="phoneNumber", type="integer", nullable=false)
+     */
+    private $phonenumber;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="gender", type="string", length=50, nullable=false)
+     */
+    private $gender;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=150, nullable=true)
+     */
+    private $image;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="age", type="integer", nullable=false)
+     */
+    private $age;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="address", type="string", length=200, nullable=false)
+     */
+    private $address;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_SU", type="date", nullable=false)
+     */
+    private $dateSu;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nbr_like", type="integer", nullable=false)
+     */
+    private $nbrLike;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="city", type="string", length=50, nullable=true)
+     */
+    private $city;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="state", type="string", length=50, nullable=true)
+     */
+    private $state;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="zip", type="string", length=50, nullable=true)
+     */
+    private $zip;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="membership", type="string", length=50, nullable=true)
+     */
+    private $membership;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="etat", type="integer", nullable=false)
+     */
+    private $etat;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateD", type="date", nullable=true)
+     */
+    private $dated;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateDD", type="date", nullable=true)
+     */
+    private $datedd;
+
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+    }
+
+
+}
+

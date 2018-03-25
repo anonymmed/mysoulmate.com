@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+{% block header %}
+    {{ include('::header_login.html.twig') }}
+{% endblock header %}
+{% block banner %}
+    {{ include('banner_login.html.twig') }}
+{% endblock %}
+{% block pagesection %}
+
+    <section class="login-form login-img dark-bg page-section-ptb100 pb-70" style="background: url({{ asset('images/pattern/04.png') }}) no-repeat 0 0; background-size: cover;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="login-1-form clearfix text-center">
+                        <h4 class="title divider-3 text-white">SIGN IN</h4>
+                        <div class="login-1-social mt-50 mb-50 text-center clearfix">
+                            <ul class="list-inline text-capitalize">
+                                <li><a class="fb" href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+                                <li><a class="gplus" href="#"><i class="fa fa-google-plus"></i>  google+</a></li>
+                                <ul class="list-inline text-uppercase top-menu">
+                                    <li><a href="{{ path('fos_user_registration_register') }}">register</a></li>
+                                    <li><a href="{{ path('fos_user_security_login') }}">login</a></li>
+                                </ul>
+
+                            </ul>
+                        </div>
+                        <form action="{{ path("fos_user_security_check") }}" method="post">
+                            {% if csrf_token %}
+                                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                            {% endif %}
+                            <div class="section-field mb-20">
+                                <div class="field-widget">
+                                    <i class="glyph-icon flaticon-user"></i>
+                                    <input id="username" class="web" type="text" placeholder="User name" name="_username" value="{{ last_username }}" required="required" autocomplete="username">
+                                </div>
+                            </div>
+                            <div class="section-field mb-10">
+                                <div class="field-widget">
+                                    <i class="glyph-icon flaticon-padlock"></i>
+                                    <input id="password" name="_password" required="required" autocomplete="current-password" class="Password" type="password" placeholder="Password">
+                                </div>
+                            </div>
+
+                            <div class="section-field mb-10">
+
+                                <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                                <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                            </div>
+                            <div class="section-field text-uppercase">
+                                <a href="#" class="pull-right text-white">Forgot Password?</a>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="section-field text-uppercase text-center mt-20">
+
+                                <input class="button  btn-lg btn-theme full-rounded animated right-icn" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}">
+                            </div><div class="clearfix"></div>
+                            <div class="section-field mt-20 text-center text-white">
+                                <p class="lead mb-0">Don’t have an account? <a class="text-white" href="{{ path('fos_user_registration_register') }}"><u>Register now!</u> </a></p>
+                            </div>
+                            {% if error %}
+                                <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+{% endblock pagesection %}
+{% block counter %}{% endblock %}
+{% block footer %}
+    {{ include('footer.html.twig') }}
+{% endblock %}

@@ -1,0 +1,26 @@
+UserBundle\Entity\Quiz:
+    type: entity
+    table: quiz
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        question:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        theme:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }
