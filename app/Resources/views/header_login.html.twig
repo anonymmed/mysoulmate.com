@@ -19,8 +19,13 @@
                             <li class="social-dribbble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
                         </ul>
                         <ul class="list-inline text-uppercase top-menu">
-                            <li><a href="{{ path('fos_user_registration_register') }}">register</a></li>
-                            <li><a href="{{ path('fos_user_security_login') }}">login</a></li>
+                            {% if app.user %}
+                                <li><a href="{{ path('fos_user_profile_show') }}">My profile</a></li>
+                                <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+                            {% else %}
+                                <li><a href="{{ path('fos_user_registration_register') }}">register</a></li>
+                                <li><a href="{{ path('fos_user_security_login') }}">login</a></li>
+                            {% endif %}
                         </ul>
                     </div>
                 </div>
