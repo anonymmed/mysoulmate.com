@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5933762-ea7a-4200-87d8-6974eb8d70da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/banner_cart.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/CartBundle/CartBundle.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/CartBundle/Controller/DefaultController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/CartBundle/Resources/config/services.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/CartBundle/Resources/views/Default/index.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/CartBundle/Resources/views/cart.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tests/CartBundle/Controller/DefaultControllerTest.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/css/style2.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/modernizr.min.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/head.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/head.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/header.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/header.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/header_loged.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/header_loged.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/header_login.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/header_login.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/jquery.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/jquery.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -404,7 +385,7 @@
       <updated>1520967825889</updated>
       <workItem from="1520967827148" duration="47386000" />
       <workItem from="1521842459920" duration="2230000" />
-      <workItem from="1521931851170" duration="12483000" />
+      <workItem from="1521931851170" duration="12540000" />
     </task>
     <task id="LOCAL-00001" summary="updating">
       <created>1521937289788</created>
@@ -420,11 +401,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521945102571</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Adding shopping cart design">
+      <created>1521951774748</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1521951774748</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62099000" />
+    <option name="totallyTimeSpent" value="62156000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -469,7 +457,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updating" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating" />
+    <MESSAGE value="Adding shopping cart design" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding shopping cart design" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
