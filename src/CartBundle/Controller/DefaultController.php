@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/cart")
+     * @Route("/cart",name="app_cart_route")
      */
     public function indexAction()
     {
