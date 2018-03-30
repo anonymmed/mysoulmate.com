@@ -1,7 +1,11 @@
 {% extends 'base.html.twig' %}
 {% trans_default_domain 'FOSUserBundle' %}
 {% block header %}
+    {% if app.user.getEmail()!= null %}
+    {{ include('header_loged.html.twig') }}
+    {% else %}
     {{ include('header_login.html.twig') }}
+{% endif %}
 {% endblock header %}
 {% block banner %}
     {{ include('banner_cart.html.twig') }}
