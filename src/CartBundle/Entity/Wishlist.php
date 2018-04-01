@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Wishlist
  *
  * @ORM\Table(name="wishlist")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="CartBundle\Repository\CartRepository")
  */
 class Wishlist
 {
@@ -60,6 +60,14 @@ class Wishlist
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
     /**

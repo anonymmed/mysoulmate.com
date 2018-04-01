@@ -12,6 +12,12 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('ProductBundle::weeding.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $products = $em->getRepository("ProductBundle:Product")->findAll();
+        if(!empty($products))
+        {
+            return $this->render("ProductBundle::weeding.html.twig",array("products"=>$products));
+        }
+        return $this->render('ProductBundle::weeding.html.twig',array("products"=>null));
     }
 }

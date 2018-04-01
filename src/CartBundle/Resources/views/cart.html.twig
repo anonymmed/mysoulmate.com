@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 {% trans_default_domain 'FOSUserBundle' %}
 {% block header %}
-    {% if app.user.getEmail()!= null %}
+    {% if app.user!= null %}
     {{ include('header_loged.html.twig') }}
     {% else %}
     {{ include('header_login.html.twig') }}
@@ -11,12 +11,14 @@
     {{ include('banner_cart.html.twig') }}
 {% endblock %}
     {% block pagesection %}
+        {% set testEmpty= "false" %}
+
         {#designe of the customer's cart#}
         <div class="wrap2 cf2" style="{{ asset('css/style2.css') }}">
             <h1 class="projTitle2"><span>MY SHOPPING CART</span> </h1>
             <div class="heading cf2">
                 <h1>My Cart</h1>
-                <a href="#" class="continue">Continue Shopping</a>
+                <a href="{{ path('product_default_index') }}" class="continue">Continue Shopping</a>
             </div>
             <div class="cart">
                 <!--    <ul class="tableHead">
@@ -28,64 +30,72 @@
                 <ul class="cartWrap">
                     {% if array == "yes" %}
                     {% for cart in carts %}
-                        {% for cart1 in cart %}
+                        {% if cart != null %}
                     <li class="items odd">
 
                         <div class="infoWrap">
                             <div class="cartSection">
                                 <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
                                 <p class="itemNumber">#QUE-007544-002</p>
-                                <h3>{{ cart1.prodName }}</h3>
-                                <p> <input type="text"  class="qty" placeholder="3"/> x ${{ cart1.prodPrice }}</p>
-                                <p> <input type="text" onclick="(this.type='date')" onmouseleave="(this.type='text');(this.value=(this.val()!=null)?(this.val()):'25/03/2018');" value="25/03/2018"/></p>
+                                <h3>{{ cart.name }}</h3>
+                                <p> <input type="text" style="border-radius:8px;border-width:1px;"  class="qty" placeholder="3"/> x ${{ cart.price }}</p>
+                                <p><label>From: </label> <input type="text" style="border-radius:8px;border-width:1px;"onclick="(this.type='date')" onmouseleave="(this.type='text');(this.value=(this.val()!=null)?(this.val()):today.getDate());" /></p>
+                                <p><label>To: </label> <input type="text" style="border-radius:8px;border-width:1px;"onclick="(this.type='date')" onmouseleave="(this.type='text');(this.value=(this.val()!=null)?(this.val()):today.getDate());" /></p>
 
                                 <p class="stockStatus"> In Stock</p>
                             </div>
 
 
                             <div class="prodTotal cartSection">
-                                <p>$15.00</p>
+                                <p>${{ cart.price }}</p>
                             </div>
                             <div class="cartSection removeWrap">
-                                <a href="#" class="remove">x</a>
+                                <a href="{{ path('delete_from_cart',{"slug":cart.id}) }}" data-path="{{ path('delete_from_cart',{"slug":cart.id}) }}" class="remove">x</a>
                             </div>
                         </div>
                     </li>
-                        {% endfor %}
+                            {% endif %}
                     {% endfor %}
-                    {% elseif carts == null %}
+
+                    {% elseif array == "no" %}
+                           {% for cart in carts %}
+                               {% if cart != null %}
+                            <li class="items odd">
+
+                                <div class="infoWrap">
+                                    <div class="cartSection">
+                                        <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
+                                        <p class="itemNumber">#QUE-007544-002</p>
+                                        <h3>{{ cart.getProdName() }}</h3>
+                                        <p> <input type="text"  style="border-radius:8px;border-width:1px;"class="qty" placeholder="3"/> x ${{ cart.getProdPrice() }}</p>
+                                        <p><label>From: </label> <input type="text" style="border-radius:8px;border-width:1px;"onclick="(this.type='date')" onmouseleave="(this.type='text');(this.value=(this.val()!=null)?(this.val()):today.getDate());" /></p>
+                                        <p><label>To: </label> <input type="text" style="border-radius:8px;border-width:1px;"onclick="(this.type='date')" onmouseleave="(this.type='text');(this.value=(this.val()!=null)?(this.val()):today.getDate());" /></p>
+
+                                        <p class="stockStatus"> In Stock</p>
+                                    </div>
+
+
+                                    <div class="prodTotal cartSection">
+                                        <p>${{cart.getProdPrice() }}</p>
+                                    </div>
+                                    <div class="cartSection removeWrap">
+                                        <a href="{{ path('delete_from_cart',{"slug":cart.id}) }}" data-path="{{ path('delete_from_cart',{"slug":cart.id}) }}" class="remove">x</a>
+                                    </div>
+                                </div>
+                            </li>
+                                   {% endif %}
+                    {% endfor %}
+                    {% else %}
+                        {% set testEmpty = "true" %}
                         <li class="items odd">
 
                             <div class="infoWrap">
                                 <h3>Your cart is empty</h3>
                             </div>
                         </li>
-                    {% else %}
-                    {% for cart in carts %}
-                    <li class="items odd">
 
-                        <div class="infoWrap">
-                            <div class="cartSection">
-                                <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
-                                <p class="itemNumber">#QUE-007544-002</p>
-                                <h3>{{ cart.prodName }}</h3>
-                                <p> <input type="text"  class="qty" placeholder="3"/> x ${{ cart.prodPrice }}</p>
-                                <p> <input type="text" onclick="(this.type='date')" onmouseleave="(this.type='text');(this.value=(this.val()!=null)?(this.val()):'25/03/2018');" value="25/03/2018"/></p>
-
-                                <p class="stockStatus"> In Stock</p>
-                            </div>
-
-
-                            <div class="prodTotal cartSection">
-                                <p>$15.00</p>
-                            </div>
-                            <div class="cartSection removeWrap">
-                                <a href="#" class="remove">x</a>
-                            </div>
-                        </div>
-                    </li>
-                    {% endfor %}
                     {% endif %}
+
 
 
                     <!--<li class="items even">Item 2</li>-->
@@ -98,13 +108,18 @@
 
             <div class="subtotal cf2">
                 <ul class="cartWrap2">
-                    <li class="totalRow"><span class="label2">Subtotal</span><span class="value">$35.00</span></li>
-
-                    <li class="totalRow"><span class="label2">Shipping</span><span class="value">$5.00</span></li>
-
+                    <li class="totalRow"><span class="label2">Subtotal</span><span class="value" >${{ total }}</span></li>
+                   {% if testEmpty =="false" %}
                     <li class="totalRow"><span class="label2">Tax</span><span class="value">$4.00</span></li>
-                    <li class="totalRow final"><span class="label2">Total</span><span class="value">$44.00</span></li>
-                    <li class="totalRow"><a href="#" class="btn continue">Checkout</a></li>
+                    <li class="totalRow final"><span class="label2">Total</span><span class="value">${{ total+4 }}</span></li>
+                       <li class="totalRow"><a href="" class="btn continue">Checkout</a></li>
+
+                           {% else %}
+                        <li class="totalRow"><span class="label2">Tax</span><span class="value">$0.00</span></li>
+                        <li class="totalRow final"><span class="label2">Total</span><span class="value">$0</span></li>
+                               <li class="totalRow"><a href="#" disabled="disabled" class="btn continue">Checkout</a></li>
+
+                   {% endif %}
                 </ul>
             </div>
         </div>

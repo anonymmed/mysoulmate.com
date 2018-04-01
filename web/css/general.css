@@ -468,7 +468,7 @@ section.text-center:hover .section-title .title:before{margin-left:-40px;}
 /*----------------------------------------------------------------------
  Alerts and Callouts
 -----------------------------------------------------------------------*/
-.alert{-webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px;}
+.alert{-webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px;margin: 0; width: 450px;}
 .alert.outline{background:none;}
 .alert.outline.alert-success{border-color:#2ecc71; color:#2ecc71;}
 .alert.outline.alert-info{border-color:#79d4f3; color:#79d4f3;}
