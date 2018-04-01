@@ -101,9 +101,38 @@ class Stripe
     /**
      * @var float
      *
-     * @ORM\Column(name="ammount", type="float")
+     * @ORM\Column(name="ammount", type="float", nullable=true)
      */
     private $ammount;
+
+    /**
+     * Stripe constructor.
+     * @param string $cardNumber
+     * @param string $cvv
+     * @param string $expMonth
+     * @param string $expYear
+     * @param string $email
+     * @param string $city
+     * @param string $state
+     * @param string $address
+     * @param string $country
+     * @param string $zip
+     * @param float $ammount
+     */
+    public function __construct($cardNumber, $cvv, $expMonth, $expYear, $email, $city, $state, $address, $country, $zip, $ammount)
+    {
+        $this->cardNumber = $cardNumber;
+        $this->cvv = $cvv;
+        $this->expMonth = $expMonth;
+        $this->expYear = $expYear;
+        $this->email = $email;
+        $this->city = $city;
+        $this->state = $state;
+        $this->address = $address;
+        $this->country = $country;
+        $this->zip = $zip;
+        $this->ammount = $ammount;
+    }
 
 
     /**

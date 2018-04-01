@@ -5,10 +5,9 @@ namespace CartBundle\Controller;
 use CartBundle\Entity\Wishlist;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Component\DependencyInjection\LazyProxy\Instantiator\RealServiceInstantiator;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-
+use \Stripe\Stripe as Stripe;
 class DefaultController extends Controller
 {
 
@@ -204,6 +203,17 @@ class DefaultController extends Controller
             }
 
         }
+
+    /**
+     * @Route("/checkout/stripe",name="stripe_checkout")
+     */
+public function stripeCheckoutAction(Request $request)
+{
+    Stripe::setApiKey("pk_test_p5iZQvuYEQg218WFtClGMw43");
+    $charge =$request->request->get("stripeToken");
+    return new Response(var_dump($charge));
+}
+
 
 
     /**

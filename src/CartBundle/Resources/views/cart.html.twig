@@ -112,11 +112,38 @@
                    {% if testEmpty =="false" %}
                     <li class="totalRow"><span class="label2">Tax</span><span class="value">$4.00</span></li>
                     <li class="totalRow final"><span class="label2">Total</span><span class="value">${{ total+4 }}</span></li>
+                       <form action="" method="POST">
+                           <script
+                                   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                   data-key="pk_test_p5iZQvuYEQg218WFtClGMw43"
+                                   data-amount="{{ total*42 }}"
+                                   data-name="med abdh"
+                                   data-description="php test"
+                                   data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                                   data-locale="auto"
+                                   data-zip-code="true">
+                           </script>
+                       </form>
+
                        <li class="totalRow"><a href="" class="btn continue">Checkout</a></li>
+
 
                            {% else %}
                         <li class="totalRow"><span class="label2">Tax</span><span class="value">$0.00</span></li>
                         <li class="totalRow final"><span class="label2">Total</span><span class="value">$0</span></li>
+                               <form style="float: right;" action="{{ path('stripe_checkout') }}" method="POST">
+                                   <script
+                                           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                           data-key="pk_test_p5iZQvuYEQg218WFtClGMw43"
+                                           data-amount="{{ total*42 }}"
+                                           data-name="med abdh"
+                                           data-description="php test"
+                                           data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                                           data-locale="auto"
+                                           data-zip-code="true">
+                                   </script>
+                               </form>
+                               <br><br><br><br>
                                <li class="totalRow"><a href="#" disabled="disabled" class="btn continue">Checkout</a></li>
 
                    {% endif %}
