@@ -7,6 +7,7 @@ $(".hover").mouseleave(
 
 $.ajaxSetup({ cache: false });
 $(document).ready(function () {
+    $(".stripe-button-el").removeClass("stripe-button-el").addClass("btn continue").css("background-color","#82ca9c").css("color","white").css("float","right").children("span").css("display","").css("min-height","");
     $('.cart1').on("click",function (e) {
         e.preventDefault();
         var path = $(this).attr("data-path");
