@@ -13,31 +13,31 @@
     {% block pagesection %}
         {#designe of products#}
         {% if products == null %}
-{% block nullProducts %}
-    <div><h3>No products are available fro now! Please come back later for further notice.</h3><br><h2>Thank you!</h2></div>
-{% endblock nullProducts %}
-    {% else %}
-        <div style="background-image: url('{{ asset('images/pattern/04.png') }}')"><h1 class="projTitle2" ><span>Our products</span> </h1>
-        <div style="background-image: url('{{ asset('images/pattern/04.png') }}')" class="alert" hidden="hidden" >
-            <div class="alert alert-success fade in">
-                <i class="fa fa-check" aria-hidden="true"></i>
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-                <strong>Success!</strong> Item successfully added to your cart.
-            </div>
-        </div></div>
-    {% for product in products %}
-    <figure class="snip1423"><img src="{{ asset('images/app-img-2.png') }}" alt="sample90" />
-        <figcaption>
-                <h3>{{ product.getName() }}</h3>
-                <p>{{ product.getDescription() }}.</p>
-                <div class="price">
-                    <s>{{ product.getPrice() }}</s>{{ product.getPrice() }}
-                </div>
-            </figcaption><a  class="cart1" data-path="{{ path('add_to_cart',{'slug':product.getId()}) }}"> <i class="ion-android-cart"></i></a>
-            <a href="#med" onclick="successNotification();"></a>
-        </figure>
-{% endfor %}
-{% endif  %}
+            {% block nullProducts %}
+                <div><h3>No products are available fro now! Please come back later for further notice.</h3><br><h2>Thank you!</h2></div>
+            {% endblock nullProducts %}
+        {% else %}
+            <div style="background-image: url('{{ asset('images/pattern/04.png') }}')"><h1 class="projTitle2" ><span>Our products</span> </h1>
+                <div style="background-image: url('{{ asset('images/pattern/04.png') }}')" class="alert" hidden="hidden" >
+                    <div class="alert alert-success fade in">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                        <strong>Success!</strong> Item successfully added to your cart.
+                    </div>
+                </div></div>
+            {% for product in products %}
+                <figure class="snip1423"><img src="{{ asset('images/app-img-2.png') }}" alt="sample90" />
+                    <figcaption>
+                        <h3>{{ product.getName() }}</h3>
+                        <p>{{ product.getDescription() }}.</p>
+                        <div class="price">
+                            <s>{{ product.getPrice() }}</s>{{ product.getPrice() }}
+                        </div>
+                    </figcaption><a  class="cart1" data-path="{{ path('add_to_cart',{'slug':product.getId()}) }}"> <i class="ion-android-cart"></i></a>
+                    <a href="#med" onclick="successNotification();"></a>
+                </figure>
+            {% endfor %}
+        {% endif  %}
 
 
 

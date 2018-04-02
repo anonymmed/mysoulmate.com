@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5933762-ea7a-4200-87d8-6974eb8d70da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/checkout.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/mysoulmate.iml" afterPath="$PROJECT_DIR$/.idea/mysoulmate.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/src/CartBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/CartBundle/Controller/DefaultController.php" />
-      <change beforePath="$PROJECT_DIR$/src/CartBundle/Entity/Stripe.php" afterPath="$PROJECT_DIR$/src/CartBundle/Entity/Stripe.php" />
-      <change beforePath="$PROJECT_DIR$/src/CartBundle/Resources/views/cart.html.twig" afterPath="$PROJECT_DIR$/src/CartBundle/Resources/views/cart.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/ProductBundle/Resources/views/weeding.html.twig" afterPath="$PROJECT_DIR$/src/ProductBundle/Resources/views/weeding.html.twig" />
+      <change beforePath="$PROJECT_DIR$/web/js/indexProducts.js" afterPath="$PROJECT_DIR$/web/js/indexProducts.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,16 +18,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="cart.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cart.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CartBundle/Resources/views/cart.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="137" column="67" lean-forward="false" selection-start-line="137" selection-start-column="67" selection-end-line="137" selection-end-column="67" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#p#2;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#p#3;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#1;n#ul#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="402">
+              <caret line="113" column="111" lean-forward="false" selection-start-line="113" selection-start-column="111" selection-end-line="113" selection-end-column="111" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -41,18 +31,18 @@
       <file leaf-file-name="Stripe.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CartBundle/Entity/Stripe.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
+            <state relative-caret-position="2541">
               <caret line="121" column="25" lean-forward="false" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexProducts.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="indexProducts.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/indexProducts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+            <state relative-caret-position="192">
+              <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -63,16 +53,10 @@
       <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CartBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="4347">
               <caret line="212" column="48" lean-forward="false" selection-start-line="212" selection-start-column="37" selection-end-line="212" selection-end-column="48" />
               <folding>
                 <element signature="e#41#72#0#PHP" expanded="true" />
-                <element signature="e#1729#1750#1#PHP" expanded="true" />
-                <element signature="e#1829#1850#1#PHP" expanded="true" />
-                <element signature="e#2009#2037#0#PHP" expanded="true" />
-                <element signature="e#2827#2855#0#PHP" expanded="true" />
-                <element signature="e#6124#6145#1#PHP" expanded="true" />
-                <element signature="e#6271#6292#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,7 +65,7 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UserBundle/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
+            <state relative-caret-position="5040">
               <caret line="241" column="14" lean-forward="false" selection-start-line="241" selection-start-column="14" selection-end-line="241" selection-end-column="14" />
               <folding>
                 <element signature="e#37#69#0#PHP" expanded="true" />
@@ -93,7 +77,7 @@
       <file leaf-file-name="Wishlist.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CartBundle/Entity/Wishlist.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
+            <state relative-caret-position="2541">
               <caret line="121" column="22" lean-forward="false" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
               <folding />
             </state>
@@ -103,8 +87,8 @@
       <file leaf-file-name="weeding.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ProductBundle/Resources/views/weeding.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="35" column="67" lean-forward="false" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
+            <state relative-caret-position="549">
+              <caret line="35" column="77" lean-forward="false" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -113,7 +97,7 @@
       <file leaf-file-name="CartRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CartBundle/Repository/CartRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
+            <state relative-caret-position="231">
               <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
               <folding>
                 <element signature="e#126#160#0#PHP" expanded="true" />
@@ -138,9 +122,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>[&quot;name&quot;=&gt;$wishliste-&gt;</find>
       <find>s</find>
-      <find>4</find>
       <find>price</find>
       <find>valu</find>
       <find>total+</find>
@@ -168,6 +150,8 @@
       <find>continue</find>
       <find>check</find>
       <find>&lt;form</find>
+      <find>4</find>
+      <find>t</find>
     </findStrings>
   </component>
   <component name="FrameworkCommandLineHistory">
@@ -206,9 +190,6 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -255,15 +236,15 @@
         <option value="$PROJECT_DIR$/web/css/styleProducts.css" />
         <option value="$PROJECT_DIR$/web/css/general.css" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/ProductBundle/Resources/views/weeding.html.twig" />
         <option value="$PROJECT_DIR$/src/CartBundle/Entity/Wishlist.php" />
         <option value="$PROJECT_DIR$/web/css/style2.css" />
-        <option value="$PROJECT_DIR$/web/js/indexProducts.js" />
         <option value="$PROJECT_DIR$/src/CartBundle/Repository/CartRepository.php" />
         <option value="$PROJECT_DIR$/src/CartBundle/Entity/Stripe.php" />
         <option value="$PROJECT_DIR$/web/js/checkout.js" />
         <option value="$PROJECT_DIR$/src/CartBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/ProductBundle/Resources/views/weeding.html.twig" />
         <option value="$PROJECT_DIR$/src/CartBundle/Resources/views/cart.html.twig" />
+        <option value="$PROJECT_DIR$/web/js/indexProducts.js" />
       </list>
     </option>
   </component>
@@ -340,6 +321,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -356,21 +339,27 @@
               <item name="mysoulmate" type="b2602c69:ProjectViewProjectNode" />
               <item name="mysoulmate" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CartBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ProductBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mysoulmate" type="b2602c69:ProjectViewProjectNode" />
               <item name="mysoulmate" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CartBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ProductBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mysoulmate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysoulmate" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ProductBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -426,6 +415,7 @@
       <workItem from="1522234773055" duration="4313000" />
       <workItem from="1522439575059" duration="29246000" />
       <workItem from="1522517693377" duration="21069000" />
+      <workItem from="1522611043233" duration="2144000" />
     </task>
     <task id="LOCAL-00001" summary="updating">
       <created>1521937289788</created>
@@ -466,7 +456,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122428000" />
+    <option name="totallyTimeSpent" value="124572000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -481,12 +471,11 @@
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18098818" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18367347" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.50322235" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295583" sideWeight="0.49785176" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -498,6 +487,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295583" sideWeight="0.49785176" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -625,7 +615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="63" column="38" lean-forward="false" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -669,7 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8204">
           <caret line="670" column="72" lean-forward="false" selection-start-line="670" selection-start-column="72" selection-end-line="670" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -698,7 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -713,7 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="220" column="28" lean-forward="false" selection-start-line="220" selection-start-column="20" selection-end-line="220" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,7 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -773,7 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="470" column="86" lean-forward="false" selection-start-line="470" selection-start-column="86" selection-end-line="470" selection-end-column="86" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -785,19 +769,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProductBundle/Resources/views/weeding.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="35" column="67" lean-forward="false" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/AbstractQuery.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="910" column="20" lean-forward="false" selection-start-line="910" selection-start-column="20" selection-end-line="910" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -805,13 +780,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="371" column="23" lean-forward="false" selection-start-line="371" selection-start-column="23" selection-end-line="371" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UserBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
+        <state relative-caret-position="5040">
           <caret line="241" column="14" lean-forward="false" selection-start-line="241" selection-start-column="14" selection-end-line="241" selection-end-column="14" />
           <folding>
             <element signature="e#37#69#0#PHP" expanded="true" />
@@ -821,7 +795,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CartBundle/Entity/Wishlist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
+        <state relative-caret-position="2541">
           <caret line="121" column="22" lean-forward="false" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
           <folding />
         </state>
@@ -829,7 +803,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CartBundle/Repository/CartRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
+        <state relative-caret-position="231">
           <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
           <folding>
             <element signature="e#126#160#0#PHP" expanded="true" />
@@ -843,17 +817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="3" column="3716" lean-forward="false" selection-start-line="3" selection-start-column="3716" selection-end-line="3" selection-end-column="3716" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/indexProducts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -861,13 +824,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="98" column="27" lean-forward="false" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CartBundle/Entity/Stripe.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="2541">
           <caret line="121" column="25" lean-forward="false" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="25" />
           <folding />
         </state>
@@ -875,28 +837,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CartBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="4347">
           <caret line="212" column="48" lean-forward="false" selection-start-line="212" selection-start-column="37" selection-end-line="212" selection-end-column="48" />
           <folding>
             <element signature="e#41#72#0#PHP" expanded="true" />
-            <element signature="e#1729#1750#1#PHP" expanded="true" />
-            <element signature="e#1829#1850#1#PHP" expanded="true" />
-            <element signature="e#2009#2037#0#PHP" expanded="true" />
-            <element signature="e#2827#2855#0#PHP" expanded="true" />
-            <element signature="e#6124#6145#1#PHP" expanded="true" />
-            <element signature="e#6271#6292#1#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProductBundle/Resources/views/weeding.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="35" column="77" lean-forward="false" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CartBundle/Resources/views/cart.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="137" column="67" lean-forward="false" selection-start-line="137" selection-start-column="67" selection-end-line="137" selection-end-column="67" />
+        <state relative-caret-position="402">
+          <caret line="113" column="111" lean-forward="false" selection-start-line="113" selection-start-column="111" selection-end-line="113" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/indexProducts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#p#2;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#p#3;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#ul#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>

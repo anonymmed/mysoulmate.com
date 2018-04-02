@@ -31,7 +31,8 @@ $(document).ready(function () {
             url : path,
             success: function (data2) {
             var final =$(".totalRow.final");
-               final.html('<span class="label2">Total</span><span class="value">$'+data2+4+'</span>');
+            var totall=parseInt(data2)+4;
+               final.html('<span class="label2">Total</span><span class="value">$'+totall+'</span>');
 
                if(data2 == 0)
                {
