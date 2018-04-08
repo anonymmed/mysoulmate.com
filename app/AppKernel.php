@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new CartBundle\CartBundle(),
             new ProductBundle\ProductBundle(),
             new SoulmateBundle\SoulmateBundle(),
+            new Payum\Bundle\PayumBundle\PayumBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

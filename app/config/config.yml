@@ -81,3 +81,15 @@ fos_user:
     from_email:
         address:        mohamed.abdelhafidh@esprit.tn
         sender_name:    Mohamed_Abdelhafidh
+
+payum:
+    security:
+        token_storage:
+            CartBundle\Entity\PaymentToken: { doctrine: orm }
+
+    storages:
+        CartBundle\Entity\Payment: { doctrine: orm }
+
+    gateways:
+        offline:
+            factory: offline
