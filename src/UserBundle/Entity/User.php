@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="UserBundle\Repository\UserRepository")
  * @ORM\Table(name="user")
  */
 class User extends BaseUser
@@ -17,6 +17,15 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="role", type="string", length=100, nullable=false)
+     */
+    private $role;
+
 
     /**
      * @var string
@@ -164,6 +173,29 @@ class User extends BaseUser
     public function getFname()
     {
         return $this->fname;
+    }
+    /**
+     * Set role
+     *
+     * @param string $role
+     *
+     * @return User
+     */
+    public function setRole($role)
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+
+    /**
+     * Get role
+     *
+     * @return string
+     */
+    public function getRole()
+    {
+        return $this->role;
     }
 
     /**

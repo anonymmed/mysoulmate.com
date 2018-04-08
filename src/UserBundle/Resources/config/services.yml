@@ -2,3 +2,14 @@ services:
 #    user.example:
 #        class: UserBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+parameters:
+
+    fuz_tools.twig.asset_exists_extension.class: UserBundle\Twig\Extension\MedExtension
+
+services:
+
+    fuz_tools.twig.asset_exists_extension:
+        class: '%fuz_tools.twig.asset_exists_extension.class%'
+        arguments: ['@kernel']
+        tags:
+          - { name: twig.extension }

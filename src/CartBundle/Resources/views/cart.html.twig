@@ -17,6 +17,7 @@
         <div class="wrap2 cf2" style="{{ asset('css/style2.css') }}">
             <h1 class="projTitle2"><span>MY SHOPPING CART</span> </h1>
             <div class="heading cf2">
+
                 <h1>My Cart</h1>
                 <a href="{{ path('product_default_index') }}" class="continue">Continue Shopping</a>
             </div>
@@ -27,6 +28,19 @@
                       <li>Total</li>
                        <li>Remove</li>
                     </ul>-->
+                <center>
+                    <div class="popupmsg" style="display: none;">
+                        <tr><td>Thank you!
+                                <h3>Thank you for activating the promocode voucher.Enjot the discount!</h3></td></tr>
+                    </div>
+                </center>
+                <center>
+                    <div class="popupmsg1" style="display: none;">
+                        <tr><td>Sorry!
+                                <h3>You have already activated you voucher!</h3></td></tr>
+                    </div>
+                </center>
+
                 <ul class="cartWrap">
                     {% if array == "yes" %}
                     {% for cart in carts %}
@@ -102,9 +116,10 @@
 
                 </ul>
             </div>
-
-            <div class="promoCode2"><label for="promo">Have A Promo Code?</label><input type="text" name="promo" placholder="Enter Code" />
-                <a href="#" class="btn"></a></div>
+            <div class="errorp"></div>
+            <br><br>
+            <div class="promoCode2"><label for="promo">Have A Promo Code?</label><input type="text" class="inputpromo" name="promo" placholder="Enter voucher Code" />
+                <a href="" id="promobtn"  class="btn"></a></div>
 
             <div class="subtotal cf2">
                 <ul class="cartWrap2">
@@ -112,7 +127,7 @@
                    {% if testEmpty =="false" %}
                     <li class="totalRow"><span class="label2">Tax</span><span class="value">$4.00</span></li>
                     <li class="totalRow final"><span class="label2">Total</span><span class="value">${{ total+4 }}</span></li>
-                       <form action="" method="POST">
+                       <form action="{{ path('stripe_checkout') }}" method="POST">
                            <script
                                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                    data-key="pk_test_p5iZQvuYEQg218WFtClGMw43"

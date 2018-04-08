@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+{% block header %}
+    {% if app.user!= null %}
+        {{ include('header_loged.html.twig') }}
+    {% else %}
+        {{ include('header_login.html.twig') }}
+    {% endif %}
+{% endblock header %}
+{% block banner %}
+    {{ include('banner_cart.html.twig') }}
+{% endblock %}
+  {% block pagesection %}
+
+
+      {% if app.user!= null %}
+          <section class="page-section-ptb grey-bg pt-30 pb-130 xs-pb-60 story-slider">
+              <div class="owl-carousel" data-nav-dots="true" data-items="5" data-md-items="4" data-sm-items="3" data-xs-items="2" data-xx-items="1" data-space="30">
+                 {% for user in users %}
+                  <div class="item">
+                      <div class="story-item">
+                          <div class="story-image clearfix"><img class="img-responsive" src="{{ asset('images/profile/01.jpg') }}" alt="">
+                              <div class="story-link"><a><i class="glyph-icon flaticon-heart-of-broken-line"></i></a></div>
+                              <input hidden="hidden" class="uemail" value="{{ user.email }}">
+                          </div>
+                          <div class="story-details text-center">
+                              <h5 class="title divider-3">{{ user.fname }} {{ user.lname }} </h5>
+                              <div class="about-des mt-30">{{ user.age }}</div>
+                              <div class="about-des mt-30">{{ user.address }}</div>
+                          </div>
+                      </div>
+                  </div>
+                  {% endfor %}
+              </div>
+          </section>
+
+      {% endif %}
+      {% block counter %}
+      {% endblock counter %}
+  {% endblock pagesection %}
+
+{% block footer %}
+    {% embed 'footer.html.twig' %}
+        {% block contact_us %}
+            {#just deleting contact form , no need for it in this page#}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

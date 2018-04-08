@@ -1,0 +1,182 @@
+{% extends 'base.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+{% block header %}
+    {% if app.user!= null %}
+        {{ include('header_loged.html.twig') }}
+    {% else %}
+        {{ include('header_login.html.twig') }}
+    {% endif %}
+{% endblock header %}
+{% block banner %}
+    {{ include('banner_cart.html.twig') }}
+{% endblock %}
+    {% block pagesection %}
+        {% set testEmpty= "false" %}
+
+        {#designe of the customer's cart#}
+        <div class="wrap2 cf2" style="{{ asset('css/style2.css') }}">
+            <h1 class="projTitle2"><span>MY SHOPPING CART</span> </h1>
+            <div class="heading cf2">
+
+                <h1>My Cart</h1>
+                <a href="{{ path('product_default_index') }}" class="continue">Continue Shopping</a>
+            </div>
+            <div class="cart">
+                <!--    <ul class="tableHead">
+                      <li class="prodHeader">Product</li>
+                      <li>Quantity</li>
+                      <li>Total</li>
+                       <li>Remove</li>
+                    </ul>-->
+                <center>
+                    <div class="popupmsg" style="display: none;">
+                        <tr><td>Thank you!
+                                <h3>Thank you for activating the promocode voucher.Enjot the discount!</h3></td></tr>
+                    </div>
+                </center>
+                <center>
+                    <div class="popupmsg1" style="display: none;">
+                        <tr><td>Sorry!
+                                <h3>You have already activated you voucher!</h3></td></tr>
+                    </div>
+                </center>
+
+                <ul class="cartWrap">
+                    {% if array == "yes" %}
+                        {% for cart in carts %}
+                            {% if cart != null %}
+                                <li class="items odd">
+
+                                    <div class="infoWrap">
+                                        <div class="cartSection">
+                                            <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
+                                            <p class="itemNumber">#QUE-007544-002</p>
+                                            <h3>{{ cart.name }}</h3>
+                                            <p> <input type="text" style="border-radius:8px;border-width:1px;"  class="qty" placeholder="3"/> x ${{ cart.price }}</p>
+                                            <p><label>From: </label> <input type="text" style="border-radius:8px;border-width:1px;"onclick="(this.type='date')" onmouseleave="(this.type='text');(this.value=(this.val()!=null)?(this.val()):today.getDate());" /></p>
+                                            <p><label>To: </label> <input type="text" style="border-radius:8px;border-width:1px;"onclick="(this.type='date')" onmouseleave="(this.type='text');(this.value=(this.val()!=null)?(this.val()):today.getDate());" /></p>
+
+                                            <p class="stockStatus"> In Stock</p>
+                                        </div>
+
+
+                                        <div class="prodTotal cartSection">
+                                            <p>${{ cart.price }}</p>
+                                        </div>
+                                        <div class="cartSection removeWrap">
+                                            <a href="{{ path('delete_from_cart',{"slug":cart.id}) }}" data-path="{{ path('delete_from_cart',{"slug":cart.id}) }}" class="remove">x</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+
+                    {% elseif array == "no" %}
+                        {% for cart in carts %}
+                            {% if cart != null %}
+                                <li class="items odd">
+
+                                    <div class="infoWrap">
+                                        <div class="cartSection">
+                                            <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
+                                            <p class="itemNumber">#QUE-007544-002</p>
+                                            <h3>{{ cart.getProdName() }}</h3>
+                                            <p> <input type="text"  style="border-radius:8px;border-width:1px;"class="qty" placeholder="3"/> x ${{ cart.getProdPrice() }}</p>
+                                            <p><label>From: </label> <input type="text" style="border-radius:8px;border-width:1px;"onclick="(this.type='date')" onmouseleave="(this.type='text');(this.value=(this.val()!=null)?(this.val()):today.getDate());" /></p>
+                                            <p><label>To: </label> <input type="text" style="border-radius:8px;border-width:1px;"onclick="(this.type='date')" onmouseleave="(this.type='text');(this.value=(this.val()!=null)?(this.val()):today.getDate());" /></p>
+
+                                            <p class="stockStatus"> In Stock</p>
+                                        </div>
+
+
+                                        <div class="prodTotal cartSection">
+                                            <p>${{cart.getProdPrice() }}</p>
+                                        </div>
+                                        <div class="cartSection removeWrap">
+                                            <a href="{{ path('delete_from_cart',{"slug":cart.id}) }}" data-path="{{ path('delete_from_cart',{"slug":cart.id}) }}" class="remove">x</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        {% set testEmpty = "true" %}
+                        <li class="items odd">
+
+                            <div class="infoWrap">
+                                <h3>Your cart is empty</h3>
+                            </div>
+                        </li>
+
+                    {% endif %}
+
+
+
+                    <!--<li class="items even">Item 2</li>-->
+
+                </ul>
+            </div>
+            <div class="errorp">
+                <h1 style="color: green;font-family: 'Droid Serif', serif" class="msg">Your order has been successfully placed!</h1>
+            </div>
+            <br><br>
+            <div class="promoCode2"><label for="promo">Have A Promo Code?</label><input type="text" class="inputpromo" name="promo" placholder="Enter voucher Code" />
+                <a href="" id="promobtn"  class="btn"></a></div>
+
+            <div class="subtotal cf2">
+                <ul class="cartWrap2">
+                    <li class="totalRow"><span class="label2">Subtotal</span><span class="value" >${{ total }}</span></li>
+                    {% if testEmpty =="false" %}
+                        <li class="totalRow"><span class="label2">Tax</span><span class="value">$4.00</span></li>
+                        <li class="totalRow final"><span class="label2">Total</span><span class="value">${{ total+4 }}</span></li>
+                        <form action="{{ path('stripe_checkout') }}" method="POST">
+                            <script
+                                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="pk_test_p5iZQvuYEQg218WFtClGMw43"
+                                    data-amount="{{ total*42 }}"
+                                    data-name="med abdh"
+                                    data-description="php test"
+                                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                                    data-locale="auto"
+                                    data-zip-code="true">
+
+                            </script>
+                        </form>
+
+
+
+                    {% else %}
+                        <li class="totalRow"><span class="label2">Tax</span><span class="value">$0.00</span></li>
+                        <li class="totalRow final"><span class="label2">Total</span><span class="value">$0</span></li>
+                        <form style="float: right;" action="{{ path('stripe_checkout') }}" method="POST">
+                            <script
+                                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="pk_test_p5iZQvuYEQg218WFtClGMw43"
+                                    data-amount="{{ total*42 }}"
+                                    data-name="med abdh"
+                                    data-description="php test"
+                                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                                    data-locale="auto"
+                                    data-zip-code="true">
+                            </script>
+                        </form>
+                        <br><br><br><br>
+
+
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+
+        {#/designe of the customer's cart#}
+        {% block counter %}
+        {% endblock %}
+    {% endblock pagesection %}
+
+{% block footer %}
+    {% embed 'footer.html.twig' %}
+        {% block contact_us %}
+            {#just deleting contact form , no need for it in this page#}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
