@@ -3,12 +3,15 @@
 namespace CartBundle\Controller;
 
 use CartBundle\Entity\Wishlist;
+use JMS\Payment\CoreBundle\Tests\Functional\TestBundle\Entity\Order;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use \Stripe\Stripe as Stripe;
 use \Stripe\Charge as Charge;
+use JMS\Payment\CoreBundle\PluginController\Result;
+
 class DefaultController extends Controller
 {
 
@@ -39,7 +42,6 @@ class DefaultController extends Controller
                 if (is_array(is_array($wishlist))) {
                     return $this->render('CartBundle::cart.html.twig', ["carts" => $wishlist, "array" => "yes", "total" => $total]);
                 } else if (is_array($wishlist)) {
-
                     return $this->render('CartBundle::cart.html.twig', ["carts" => null, "array" => "no", "total" => $total]);
 
                 }
@@ -426,6 +428,10 @@ public function checkLoggedAction(Request $request)
     {
         return $this->forward("ProductBundle:Default:index");
     }
+
+
+
+
 
 }
 

@@ -19,11 +19,20 @@ class SoulmateRepository extends EntityRepository
 {
 public function getMyMatch($email,User $user)
 {
+    $result = null;
     $query=$this->getEntityManager()->createQuery("select l.liked,l.likedBy from SoulmateBundle:Likes l WHERE l.liked = :email and l.likedBy= :email1")->setParameter("email",$user->getEmail())->setParameter("email1",$email);
 
     try {
         $result =$query->getScalarResult();
-        return $result[0];
+        if($result == null || $result == "")
+        {
+            return null;
+        }
+        else
+        {
+            return $result[0];
+
+        }
 
     } catch (NoResultException $e) {
     } catch (NonUniqueResultException $e) {

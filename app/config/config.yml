@@ -93,3 +93,12 @@ payum:
     gateways:
         offline:
             factory: offline
+
+jms_payment_core:
+    encryption:
+        secret: def000004704917eb1f8255f73eb67c0c339429f12cfd1fe324abb52b2cc393a5ee572ff64a52dd71a55c21536d82e55feb5d174a498935782068715a4ca9c31381c8f12
+
+jms_payment_paypal:
+    username: mohamed.abdelhafidh_api1.esprit.tn
+    password: 8XUEJRVGA37DBAFM
+    signature: AZnF9fJU7Uybz8cttqSxuYMWGl6SAJqxTqX4VukKBxrwmxrdDbLuUnsk

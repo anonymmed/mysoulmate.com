@@ -22,7 +22,7 @@ class User extends BaseUser
     /**
      * @var string
      *
-     * @ORM\Column(name="role", type="string", length=100, nullable=false)
+     * @ORM\Column(name="role", type="string", length=100, nullable=true)
      */
     private $role;
 
@@ -30,14 +30,14 @@ class User extends BaseUser
     /**
      * @var string
      *
-     * @ORM\Column(name="fname", type="string", length=100, nullable=false)
+     * @ORM\Column(name="fname", type="string", length=100, nullable=true)
      */
     private $fname;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="lname", type="string", length=100, nullable=false)
+     * @ORM\Column(name="lname", type="string", length=100, nullable=true)
      */
     private $lname;
 
@@ -48,14 +48,14 @@ class User extends BaseUser
     /**
      * @var integer
      *
-     * @ORM\Column(name="phoneNumber", type="integer", nullable=false)
+     * @ORM\Column(name="phoneNumber", type="integer", nullable=true)
      */
     private $phonenumber;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="gender", type="string", length=50, nullable=false)
+     * @ORM\Column(name="gender", type="string", length=50, nullable=true)
      */
     private $gender;
 
@@ -69,28 +69,28 @@ class User extends BaseUser
     /**
      * @var integer
      *
-     * @ORM\Column(name="age", type="integer", nullable=false)
+     * @ORM\Column(name="age", type="integer", nullable=true)
      */
     private $age;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="address", type="string", length=200, nullable=false)
+     * @ORM\Column(name="address", type="string", length=200, nullable=true)
      */
     private $address;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date_SU", type="date", nullable=false)
+     * @ORM\Column(name="date_SU", type="date", nullable=true)
      */
     private $dateSu;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="nbr_like", type="integer", nullable=false)
+     * @ORM\Column(name="nbr_like", type="integer", nullable=true)
      */
     private $nbrLike;
 
@@ -125,7 +125,7 @@ class User extends BaseUser
     /**
      * @var integer
      *
-     * @ORM\Column(name="etat", type="integer", nullable=false)
+     * @ORM\Column(name="etat", type="integer", nullable=true)
      */
     private $etat;
 

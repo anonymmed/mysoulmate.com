@@ -21,6 +21,9 @@ class AppKernel extends Kernel
             new ProductBundle\ProductBundle(),
             new SoulmateBundle\SoulmateBundle(),
             new Payum\Bundle\PayumBundle\PayumBundle(),
+            new JMS\Payment\CoreBundle\JMSPaymentCoreBundle(),
+            new JMS\Payment\PaypalBundle\JMSPaymentPaypalBundle(),
+
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
