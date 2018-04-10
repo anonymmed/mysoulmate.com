@@ -27,6 +27,7 @@
         "incenteev/composer-parameter-handler": "^2.0",
         "league/uri-components": "~0.5",
         "payum/offline": "^1.5",
+        "payum/paypal-express-checkout-nvp": "^1.5",
         "payum/payum": "^1.4",
         "payum/payum-bundle": "^2.2",
         "php-http/curl-client": "^1.7",

@@ -18,15 +18,23 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         if ($this->getUser() != null) {
-
+            $em1 = $this->getDoctrine()->getManager();
+            $checkVoucher = $em1->getRepository("CartBundle:Wishlist")->getVoucherNotNull($this->getUser());
             $session = $request->getSession();
             if (!($session->has("cart"))) {
-
+                if($checkVoucher != null || $checkVoucher != "")
                 $session->set("cart", array());
                 $user = $this->getUser();
                 $email = $user->getEmail();
                 $em = $this->getDoctrine()->getManager();
-                $total = $em->getRepository("CartBundle:Wishlist")->totalUser($this->getUser());
+                if($checkVoucher != null || $checkVoucher != "")
+                {
+                    $vprice = $this->getVoucherValue($checkVoucher);
+                    $total = $em1->getRepository("CartBundle:Wishlist")->totalUser1($this->getUser(), $vprice);
+                }
+                else {
+                    $total = $em->getRepository("CartBundle:Wishlist")->totalUser($this->getUser());
+                }
                 $wishlist = $em->getRepository("CartBundle:Wishlist")->findBy(["emailClient" => $email]);
                 if (is_array(is_array($wishlist))) {
                     return $this->render('CartBundle::cart.html.twig', ["carts" => $wishlist, "array" => "yes", "total" => $total]);
@@ -42,7 +50,15 @@ class DefaultController extends Controller
                 $user = $this->getUser();
                 $email = $user->getEmail();
                 $em = $this->getDoctrine()->getManager();
+                if($checkVoucher != null || $checkVoucher != "")
+                {
+                    $vprice = $this->getVoucherValue($checkVoucher);
+                    $total = $em1->getRepository("CartBundle:Wishlist")->totalUser1($this->getUser(), $vprice);
+                }
+                else
+                {
                 $total = $em->getRepository("CartBundle:Wishlist")->totalUser($this->getUser());
+                }
                 $wishlist = $em->getRepository("CartBundle:Wishlist")->findBy(["emailClient" => $this->getUser()->getEmail()]);
 
                 if ($this->contains_array($wishlist)) {
@@ -281,12 +297,60 @@ class DefaultController extends Controller
     }
 
 
+    public function getVoucherValue($slug)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $voucher = $em->getRepository("CartBundle:Voucher")->findOneBy(array("code"=>$slug));
+        if(empty($voucher))
+        {
+            return null;
+        }
+        else
+        {
+            return intval($voucher->getDiscount());
+        }
+
+    }
+
     /**
      * @Route("/cart/discount/{slug}",name="cart_voucher")
      */
     public function discountAction(Request $request,$slug)
     {
         $em = $this->getDoctrine()->getManager();
+        $vprice = $this->getVoucherValue($slug);
+        if($vprice != null)
+        {
+
+
+        $em->getRepository("CartBundle:Wishlist")->changeTotal($this->getUser(),$slug);
+        }
+        $checkVoucher = $em->getRepository("CartBundle:Wishlist")->findOneBy(array("emailClient"=>$this->getUser()->getEmail()));
+        if($checkVoucher != null)
+            $checkVoucher=$checkVoucher->getVoucher();
+        if($checkVoucher!=null || $checkVoucher != "")
+        {
+            $voucher = $em->getRepository("CartBundle:Voucher")->findOneBy(array("code"=>$slug));
+            if(empty($voucher))
+            {
+                return new Response("no voucher found");
+            }
+            else {
+                $vprice = $this->getVoucherValue($slug);
+                if($vprice==null)
+                {
+                    $total = $em->getRepository("CartBundle:Wishlist")->totalUser($this->getUser());
+                }
+                else
+                {
+                $em->getRepository("CartBundle:Wishlist")->changeTotal($this->getUser(),$slug);
+                $total = $em->getRepository("CartBundle:Wishlist")->totalUser1($this->getUser(), $vprice);
+                }
+                return new Response($total);
+            }
+        }
+        else
+        {
         $voucher = $em->getRepository("CartBundle:Voucher")->findOneBy(array("code"=>$slug));
         if(empty($voucher))
         {
@@ -295,7 +359,7 @@ class DefaultController extends Controller
         else {
             $discount = intval($voucher->getDiscount());
             if ($this->getUser() != null) {
-                $total = ($this->totalAction($this->getUser()))+4;
+                $total = $em->getRepository("CartBundle:Wishlist")->totalUser($this->getUser())+4;
 
                 $total -=($discount*$total)/100;
                 return new Response($total);
@@ -307,6 +371,7 @@ class DefaultController extends Controller
                 return new Response($total);
             }
         }
+    }
     }
 
 

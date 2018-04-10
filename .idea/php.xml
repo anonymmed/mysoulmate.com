@@ -58,6 +58,8 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/payum/payum-bundle" />
       <path value="$PROJECT_DIR$/vendor/payum/offline" />
+      <path value="$PROJECT_DIR$/vendor/payum/paypal-express-checkout-nvp" />
     </include_path>
   </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="5.5.0" />
 </project>

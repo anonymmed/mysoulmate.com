@@ -28,3 +28,8 @@
 <script type="text/javascript" src="{{ asset('js/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
 <script  src="{{ asset('js/index.js') }}"></script>
 <script  src="{{ asset('js/indexProducts.js') }}"></script>
+<script type="application/javascript"  src="{{ asset('js/jquery.session.js') }}"></script>
+<script type="application/javascript"  src="{{ asset('js/jquery.cookie.js') }}"></script>
+{% if app.user!= null %}
+<script type="application/javascript"  src="{{ asset('js/matchingNotif.js') }}"></script>
+{% endif %}

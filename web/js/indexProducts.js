@@ -88,11 +88,12 @@ $(document).ready(function () {
 
         }
         else {
-
+            var check = -1;
             var path = "http://localhost/mysoulmate/web//app_dev.php/cart/discount/" + promocode;
             $.ajax({
                 type: "get",
                 url: path,
+                cache: false,
                 success: function (data) {
                     if (parseInt(data)) {
                         if (check !== 1) {
@@ -132,11 +133,12 @@ $(document).ready(function () {
                         }
 
                         var final = $(".totalRow.final");
-
-                        final.html('<span class="label2">Total</span><span class="value">$' + data + '</span>');
+                        var totalprice = parseInt(data);
+                        totalprice +=4;
+                        final.html('<span class="label2">Total</span><span class="value">$' + totalprice + '</span>');
                     }
                     else {
-                        alert("No voucher Found");
+                        swal("Error","No voucher Found","error");
                     }
                 }
             });
@@ -146,17 +148,7 @@ $(document).ready(function () {
 
 
 $(document).ready(function (e) {
-    $.ajax({
-        type: "get",
-        url: "http://localhost/mysoulmate/web/app_dev.php/mysoulmate/checkMatch",
-        success: function (datac) {
-            if(datac !== 0 )
-            {
-                var msg = "you have "+datac.toString()+" new matching";
-                swal("You have New matchings!", msg, "success");
-            }
-        }
-    });
+
 
     $(".glyph-icon").on("click",function (e) {
         e.preventDefault();
@@ -166,6 +158,7 @@ $(document).ready(function (e) {
             url: "http://localhost/mysoulmate/web/app_dev.php/mysoulmate/likeUser/"+email,
             success: function (data) {
                 swal("Success!", "Like successfully sent! You will get a notification as soon as you get a like back from him/her", "success");
+
 
             }
 

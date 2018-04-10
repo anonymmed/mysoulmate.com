@@ -28,6 +28,12 @@ class Wishlist
      * @ORM\Column(name="prod_name", type="string", length=50, nullable=false)
      */
     private $prodName;
+    /**
+     * @var string
+     *
+         * @ORM\Column(name="voucher", type="string", length=200, nullable=true)
+     */
+    private $voucher;
 
     /**
      * @var string
@@ -68,6 +74,23 @@ class Wishlist
     public function setId($id)
     {
         $this->id = $id;
+    }
+    /**
+     * Get voucher
+     *
+     * @return string
+     */
+    public function getVoucher()
+    {
+        return $this->voucher;
+    }
+
+    /**
+     * @param int $voucher
+     */
+    public function setVoucher($voucher)
+    {
+        $this->voucher = $voucher;
     }
 
     /**
